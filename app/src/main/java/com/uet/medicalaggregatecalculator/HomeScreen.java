@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class HomeScreen extends AppCompatActivity {
@@ -29,7 +30,11 @@ public class HomeScreen extends AppCompatActivity {
         double aggregate = p1 + p2 + p3;
         String output = String.valueOf(aggregate);
 
-        Toast.makeText(this, output, Toast.LENGTH_SHORT).show();
+        TextView res = (TextView) findViewById(R.id.id_result);
+
+        res.setText(String.valueOf(aggregate));
+
+//        Toast.makeText(this, output, Toast.LENGTH_SHORT).show();
     }
 
     @Override
